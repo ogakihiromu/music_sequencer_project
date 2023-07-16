@@ -1,0 +1,10 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'soundEmulator'
+
+run {
+    if (project.hasProperty('args')) {
+        args(["data/coe/" + project.args + "/" + project.args + "1.coe", "data/coe/" + project.args + "/" + project.args + "2.coe", "data/coe/" + project.args + "/" + project.args + "3.coe"])
+    }
+}
